@@ -19,8 +19,8 @@ Description of directories:
 	-Third Assignment: We worked with tensors (3 dimension data structures), implementing the forward and loss function, and derivatives of a given function.
 	-Fourth Assignment: Backpropagation using the autograd library. This library provides derivatives of functions to complete the backpropagation process. Implemented gradient descent using this library while working with tensors.
 	-Fifth Assignment: The homework focuses on implementing and analyzing a simplified TransformerBlock, which includes two key components: 
-		-SingleHeadAttention Layer: Performs sequence-to-sequence mapping 	using self-attention. 
-		-MLP Layer: Applies a single hidden layer with a ReLU activation to 	the attention output.
+		-SingleHeadAttention Layer: Performs sequence-to-sequence mapping using self-attention. 
+		-MLP Layer: Applies a single hidden layer with a ReLU activation to the attention output.
 
 -Exams: Constains problems and solutions that helped me prepare for both exams.
 
