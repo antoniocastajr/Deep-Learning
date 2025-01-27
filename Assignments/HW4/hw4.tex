@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage[margin=1in]{geometry}
+\usepackage{tcolorbox}
+\usepackage{bm}
+\usepackage{graphicx}
+
+
+\newcommand{\mydivider}{\vspace{1em}\hrule\vspace{1em}}
+\newcommand{\mypart}[2]{\noindent{\textbf{[#1] point(s) --- #2:}}}
+\newcommand{\programming}{\textcolor{blue}{This is a programming exercise. See \texttt{hw4.ipynb}}}
+
+
+
+%%% BEGIN MACROS
+% type your macros here
+%%% END MACROS
+
+
+\title{CS 577 --- Deep Learning --- Homework 4}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\textbf{Read these instructions carefully}:
+\begin{itemize}
+  \item
+In the \LaTeX~source code, type your answer in between
+``\verb|%%% BEGIN ANSWER|'' and
+``\verb|%%% END ANSWER|''.
+        For advanced \LaTeX users,
+        you can use your custom macros if you wish
+        by placing them
+        between
+``\verb|%%% BEGIN MACROS|'' and
+``\verb|%%% END MACROS|'' in the header.
+        Do not modify anything else.
+
+
+
+
+  \item Turn in both your \verb|.tex| file and the generated \verb|.pdf| file.
+\end{itemize}
+
+
+
+\section{Backpropagation}
+
+\mypart{5}{part a}
+
+Answer the question in Section 1.3.7 of
+\texttt{backpropagation.pdf}:
+How can we calculate
+\(\frac{\partial f}{\partial z_{4}}(x,y)
+\)
+given
+correct value of
+\(
+\frac{\partial f}{\partial z_{5}}(x,y)
+\)?
+\begin{tcolorbox}
+\textbf{Answer: }
+
+%%% BEGIN ANSWER
+Using the chain rule, we can calculate the derivative of \(f\) with respect to \(z_{4}\) as follows:
+$$\frac{\partial f}{\partial z_{4}} = \frac{\partial f}{\partial z_{5}} (x,y) \frac{\partial z_{5}}{\partial z_{4}} $$
+%%% END ANSWER
+
+\end{tcolorbox}
+
+\mypart{5}{part b}
+
+Answer the question in Section 1.3.8 of \texttt{backpropagation.pdf}: What is currently stored in \texttt{z3.grad} right before \texttt{z4.\_backward()} is called?
+
+\begin{tcolorbox}
+\textbf{Answer: }
+
+%%% BEGIN ANSWER
+\(\frac{\partial f}{\partial x_3}\) is stored in z3.grad . Using the chain rule, we can calculate the derivative of \(f\) with respect to \(z_{3}\) as follows:
+$$\frac{\partial f}{\partial x_3} = \frac{\partial f}{\partial x_8}(x,y)\frac{\partial x_8}{\partial x_3}$$
+We know that \(\frac{\partial f}{\partial x_8}(x,y)\) is 1, as $z_8 = f(x,y)$ and $\frac{\partial x_8}{\partial x_3}$ is $ \frac{\partial (x_7 * x_3)}{\partial z_3}$, so:
+$$\frac{\partial f}{\partial x_3} = \frac{\partial (x_7 * x_3)}{\partial z_3}$$ 
+Using the product rule and knowing the derivative of \(z_3\) with respect to \(z_3\) is 1, we get:
+$$\frac{\partial f}{\partial x_3} = z_7 \frac{\partial z_3}{\partial z_3} + z_3 \frac{\partial z_7}{\partial z_3} = z_7 + z_3 \frac{\partial z_7}{\partial z_3}$$
+The first term is $z_7$ and the second term is  $z_3 \frac{\partial z_7}{\partial z_3}$. This last term has not been compute because it depends on the backward pass through $z_4$.
+So, the value of \texttt{z3.grad} stored before calling \texttt{z4.\_backward()} is $z_7$. The second term will be added once backpropagation processes earlier nodes.
+%%% END ANSWER
+
+\end{tcolorbox}
+
+
+\section{Gradient descent with \texttt{ag.Scalar}}
+
+\mypart{10}{part a}  \programming
+
+\section{Transformer with \texttt{ag.Scalar}}
+\mypart{Bonus 20}{part a}  \programming
+
+\end{document}
