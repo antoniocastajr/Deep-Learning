@@ -3,7 +3,7 @@
 ## 📖 Course Overview  
 Taught by **Yutong Wang**, this course focuses on understanding the internals of **deep learning frameworks** such as **PyTorch**. It helped me grasp concepts like **backpropagation, loss functions, optimizers**, and their applications. The course includes **six assignments, one project, and two exams**.  
 
-## Main Topics  
+## 📝 Main Topics  
 - **Regression**: From linear regression to kernel methods to neural networks  
 - **Classification**: Loss functions, cross entropy, numerical stability  
 - **Optimizers**: Gradient Descent, Momentum, adaptive methods  
