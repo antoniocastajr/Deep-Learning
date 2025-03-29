@@ -1,12 +1,12 @@
-# CS 577: Deep Learning  
+# 📌 CS 577: Deep Learning  
 
-## Course Overview  
+## 📖 Course Overview  
 Taught by **Yutong Wang**, this course focuses on understanding the internals of **deep learning frameworks** such as **PyTorch**. It helped me grasp concepts like **backpropagation, loss functions, optimizers**, and their applications. The course includes **six assignments, one project, and two exams**.  
 
 ## Main Topics  
 - **Regression**: From linear regression to kernel methods to neural networks  
 - **Classification**: Loss functions, cross entropy, numerical stability  
-- **Optimizers**: Momentum, adaptive methods  
+- **Optimizers**: Gradient Descent, Momentum, adaptive methods  
 - **Backpropagation**  
 - **Computer Vision**  
 - **Natural Language Processing (NLP)**  
@@ -14,9 +14,9 @@ Taught by **Yutong Wang**, this course focuses on understanding the internals of
 
 ---
 
-## **Directory Structure**  
+## 📂 **Directory Structure**  
 
-### **Assignments/**  
+### 📂 **Assignments/**  
 Contains my solutions for each assignment:  
 
 - **First Assignment**: Introduction to **LaTeX** and implementation of the **Perceptron Algorithm**.  
@@ -27,13 +27,13 @@ Contains my solutions for each assignment:
   - **SingleHeadAttention Layer**: Performs **sequence-to-sequence mapping** using **self-attention**.  
   - **MLP Layer**: Applies a **single hidden layer** with **ReLU activation** to the attention output.  
 
-### **Exams/**  
+### 📂 **Exams/**  
 Contains **problems and solutions** used to prepare for both exams.  
 
-### **Lectures/**  
+### 📂 **Lectures/**  
 Contains **slides and notebooks** used in the course.  
 
-### **Project/**  
+### 📂 **Project/**  
 Our project focused on **developing and testing a simplified version of BERT**. We **pretrained the model** using:  
 - **Masked Language Modeling (MLM)**  
 - **Next Sentence Prediction (NSP)**  
@@ -42,7 +42,8 @@ Finally, we **fine-tuned** the model for **sentiment classification** on the **I
 
 ---
 
-## **Technologies Used**  
+## 🛠 **Technologies Used** 
+- **Numpy**
 - **PyTorch**  
 - **Deep Learning Frameworks** (Transformers, NLP models)  
 - **BERT (Bidirectional Encoder Representations from Transformers)**  
